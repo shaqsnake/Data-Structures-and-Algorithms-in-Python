@@ -31,5 +31,5 @@ while not done:
         num_courses += 1
         total_points += points[grade]
 
-if num_courses > 0: # avoid division by zero
+if num_courses > 0: # avoid division by
     print("Your GPA is {0:.3}".format(total_points / num_courses))
