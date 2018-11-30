@@ -39,5 +39,12 @@ class PredatoryCreditCard(CreditCard):
 
 
 if __name__ == "__main__":
-    pcc = PredatoryCreditCard('SeanTan', 'ICBC', '6200 1234 5521 1563', 10000, 0.05)
-    print(pcc._account)
+    pcc = PredatoryCreditCard('SeanTan', 'ICBC', '6200 1234 5521 1563', 800, 0.0825)
+    
+    for val in range(100, 500, 100):
+        pcc.charge(val)
+        print("Customer: %s, Bank: %s, Limit: %d, Balance: %d" % (pcc.get_customer(), pcc.get_bank(), pcc.get_limit(), pcc.get_balance()))
+
+    print("After monthly check...")
+    pcc.process_month()
+    print("Customer: %s, Bank: %s, Limit: %d, Balance: %d" % (pcc.get_customer(), pcc.get_bank(), pcc.get_limit(), pcc.get_balance()))
