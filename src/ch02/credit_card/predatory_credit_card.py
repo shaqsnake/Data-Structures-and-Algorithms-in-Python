@@ -26,7 +26,7 @@ class PredatoryCreditCard(CreditCard):
         Return False and assess 5 yuan if charge id denied.
         """
         success = super().charge(price)
-        if not success:
+        if not success:                                                                                                                                                                                                                                                                           
             self._balance += 5
         return success
 
@@ -39,7 +39,7 @@ class PredatoryCreditCard(CreditCard):
 
 
 if __name__ == "__main__":
-    pcc = PredatoryCreditCard('SeanTan', 'ICBC', '6200 1234 5521 1563', 800, 0.0825)
+    pcc = PredatoryCreditCard('Sean Tan', 'ICBC', '6200 1234 5521 1563', 800, 0.0825)
     
     for val in range(100, 500, 100):
         pcc.charge(val)
