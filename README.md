@@ -7,3 +7,6 @@
 2. 面向对象编程
 3. 算法分析
 4. 递归
+
+## 课后作业
+1. [Assignment-01](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-01.ipynb)
