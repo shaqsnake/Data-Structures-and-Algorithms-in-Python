@@ -19,14 +19,17 @@ class Progression:
     def __next__(self):
         """Return the next element, or else raise StopIteration error.
         """
+        # TODO: Implement this method.
         pass
 
     def __iter__(self):
         """Return itself as an iterator.
         """
+        # TODO: Implement this method.
         pass
 
     def print_progression(self, n):
         """Print next n values of the progression.
         """
+        # TODO: Implement this method.
         pass
