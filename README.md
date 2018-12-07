@@ -4,7 +4,7 @@
 
 ## 课程目录
 1. [Python入门](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/01-Introduction-to-Python.ipynb)
-2. 面向对象编程
+2. [面向对象编程](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/02-OOP.ipynb)
 3. 算法分析
 4. 递归
 
