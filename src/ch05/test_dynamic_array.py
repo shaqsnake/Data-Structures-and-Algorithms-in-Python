@@ -9,6 +9,7 @@ def test_dynamic_array_get_element_by_index():
         da.append(i)
         assert da[i] == i
 
+
 def test_dynamic_array_double_capacity_automatically():
     da = DynamicArray()
     for i in range(2):
@@ -19,6 +20,7 @@ def test_dynamic_array_double_capacity_automatically():
 
     da.append(2)
     assert da._cap == 4
+
 
 def test_dynamic_array_should_raises_IndexError_when_out_of_index():
     da = DynamicArray()

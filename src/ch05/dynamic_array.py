@@ -43,4 +43,3 @@ class DynamicArray:
             B[i] = self._A[i]
         self._A = B
         self._cap = cap
-
