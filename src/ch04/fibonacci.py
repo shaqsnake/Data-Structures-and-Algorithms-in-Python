@@ -1,6 +1,8 @@
+from functools import lru_cache
 from utils.clockdeco import clock
 
 
+@lru_cache()
 @clock
 def fibonacci(n):
     if n < 2:
