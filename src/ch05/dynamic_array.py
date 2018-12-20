@@ -25,16 +25,16 @@ class DynamicArray:
     def __getitem__(self, k):
         """Return the element of array which indexed at k.
         """
-        if not 0 <= k <= self._len:
+        if not 0 <= k < self._len:
             raise IndexError("wrong index")
         return self._A[k]
 
-    def append(self, element):
+    def append(self, val):
         """Add element to the end of array.
         """
         if self._len == self._cap:
             self._resize(2 * self._cap)
-        self._A[self._len] = element
+        self._A[self._len] = val
         self._len += 1
 
     def _resize(self, cap):
@@ -43,3 +43,14 @@ class DynamicArray:
             B[i] = self._A[i]
         self._A = B
         self._cap = cap
+
+    def insert(self, k, val):
+        """Insert value at index k and shifting subsequent values rightward.
+        """
+        if self._len == self._cap:
+            self._resize(2 * self._cap)
+        # shifting the sub array to right    
+        for i in range(self._len, k, -1):
+            self._A[i] = self._A[i-1]
+        self._A[k] = val
+        self._len += 1
