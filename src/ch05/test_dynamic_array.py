@@ -44,3 +44,17 @@ def test_dynamic_array_should_return_specified_value_after_insert():
     assert len(da) == 3
     assert da._cap == 4
     assert da[2] == 3
+
+
+def test_dynamic_array_should_remove_specified_element():
+    da = DynamicArray()
+    da.append(1)
+    da.append(2)
+    da.append(3)
+    da.remove(2)
+    assert da[0] == 1
+    assert da[1] == 3
+
+    da.remove(1)
+    assert da[0] == 3
+    

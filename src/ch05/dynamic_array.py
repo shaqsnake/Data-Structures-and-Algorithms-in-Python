@@ -49,8 +49,20 @@ class DynamicArray:
         """
         if self._len == self._cap:
             self._resize(2 * self._cap)
-        # shifting the sub array to right    
+        # shifting the sub array to right
         for i in range(self._len, k, -1):
-            self._A[i] = self._A[i-1]
+            self._A[i] = self._A[i - 1]
         self._A[k] = val
         self._len += 1
+
+    def remove(self, val):
+        """Remove first occurrence of value, raise Value Error if not match.
+        """
+        for k in range(self._len):
+            if self._A[k] == val:
+                for i in range(k, self._len - 1):
+                    self._A[i] = self._A[i + 1]
+                self._A[self._len - 1] = None
+                self._len -= 1
+                return
+        raise ValueError('value not found')
