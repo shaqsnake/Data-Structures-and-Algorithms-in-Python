@@ -7,6 +7,7 @@
 2. [面向对象编程](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/02-OOP.ipynb)
 3. [算法分析](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/03-Algorithm-Analysis.ipynb)
 4. [递归](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/04-Recursion.ipynb)
+5. [基于数组的序列](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/05-Array-Based-Sequences.ipynb)
 
 ## 课后作业
 1. [Assignment-01](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-01.ipynb)
