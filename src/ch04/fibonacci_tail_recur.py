@@ -1,7 +1,7 @@
 from utils.tail_call_optimized import tail_call_optimized
 
 
-# @tail_call_optimized
+@tail_call_optimized
 def fib_tail_recur(n, res, temp):
     if n == 0:
         return res

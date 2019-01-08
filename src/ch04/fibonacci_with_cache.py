@@ -1,8 +1,18 @@
-from functools import lru_cache
 from utils.clockdeco import clock
 
 
-@lru_cache()
+def cache(func):
+    mem = {}
+
+    def func_wrapper(n):
+        if n not in mem.keys():
+            mem[n] = func(n)
+        return mem[n]
+
+    return func_wrapper
+
+
+@cache
 @clock
 def fibonacci(n):
     if n < 2:
