@@ -1,7 +1,7 @@
-from utils.clockdeco import clock
+from utils.tail_call_optimized import tail_call_optimized
 
 
-@clock
+@tail_call_optimized
 def fib_tail_recur(n, res, temp):
     if n == 0:
         return res
@@ -9,4 +9,4 @@ def fib_tail_recur(n, res, temp):
 
 
 if __name__ == "__main__":
-    print(fib_tail_recur(5, 0, 1))
+    print(fib_tail_recur(1000, 0, 1))
