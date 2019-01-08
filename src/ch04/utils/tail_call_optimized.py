@@ -23,7 +23,7 @@ def tail_call_optimized(g):
         if f.f_back and f.f_back.f_back and f.f_back.f_back.f_code == f.f_code:
             raise TailRecurseException(args, kwargs)
         else:
-            while 1:
+            while True:
                 try:
                     return g(*args, **kwargs)
                 except TailRecurseException as e:
