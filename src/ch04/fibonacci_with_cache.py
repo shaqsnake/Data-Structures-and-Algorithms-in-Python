@@ -3,13 +3,18 @@ from utils.clockdeco import clock
 
 def cache(func):
     mem = {}
+    hit = 0
 
-    def func_wrapper(n):
+    def wrapper(n):
+        nonlocal hit
         if n not in mem.keys():
             mem[n] = func(n)
+        else:
+            hit += 1
+            print("cache hit @%s(%d)" % (func.__name__, n))
         return mem[n]
 
-    return func_wrapper
+    return wrapper
 
 
 @cache
