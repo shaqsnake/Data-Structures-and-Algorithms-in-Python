@@ -1,27 +1,24 @@
-class Empty(Exception):
-    """Error attempting to access an element from an empty container.
-    """
-    pass
+from abstract_stack import AbstractStack
 
 
-class ArrayStack:
+class ArrayStack(AbstractStack):
     """LIFO Stack implementation using a Python list as underlying storage.
     """
 
     def __init__(self):
         """Create an empty stack."""
+        super().__init__()
         self._data = []
 
-    def __len__(self):
-        """Return the # of elements in the stack."""
-        return len(self._data)
-
-    def is_empty(self):
-        """Return Ture if the stack is empty."""
-        return len(self._data) == 0
+    def __iter__(self):
+        p = self._top
+        while p >= 0:
+            yield self._data[p]
+            p -= 1
 
     def push(self, e):
         """Add element e to the top of stack."""
+        self._top += 1
         self._data.append(e)
 
     def pop(self):
@@ -29,13 +26,14 @@ class ArrayStack:
         Raise Empty exception if the stack is empty.
         """
         if self.is_empty():
-            raise Empty("Stack is empty")
+            raise IndexError("Stack is empty")
+        self._top -= 1
         return self._data.pop()
 
-    def top(self):
+    def peek(self):
         """Return (not remove) the element at the top of the stack.
         Raise Empty exception if the stack is empty.
         """
         if self.is_empty():
-            raise Empty("Stack is empty")
-        return self._data[-1]
+            raise IndexError("Stack is empty")
+        return self._data[self._top]
