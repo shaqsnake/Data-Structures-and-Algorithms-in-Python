@@ -1,7 +1,7 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 
-class AbstractStack(metaclass=ABCMeta):
+class AbstractStack(ABC):
     """Abstract Class for Stacks."""
     def __init__(self):
         self._top = -1
@@ -18,16 +18,16 @@ class AbstractStack(metaclass=ABCMeta):
 
     @abstractmethod
     def __iter__(self):
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def push(self, e):
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def pop(self):
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def peek(self):
-        pass
+        raise NotImplementedError
