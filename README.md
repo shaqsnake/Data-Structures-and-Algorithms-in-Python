@@ -12,3 +12,4 @@
 ## 课后作业
 1. [Assignment-01](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-01.ipynb)
 2. [Assignment-02](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-02.ipynb)
+3. [Assignment-03](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-03.ipynb)
