@@ -1,8 +1,8 @@
 from abstract_queue import AbstractQueue
 
 
-class CircleQueue(AbstractQueue):
-    """Circle Queue implementation using a Python list as underlying storage.
+class CircularQueue(AbstractQueue):
+    """Circular Queue implementation using a Python list as underlying storage.
     """
     def __init__(self, cap=10):
         super().__init__()
@@ -49,7 +49,7 @@ class CircleQueue(AbstractQueue):
 
 
 if __name__ == "__main__":
-    queue = CircleQueue()
+    queue = CircularQueue()
     for i in range(10):
         queue.enqueue(i)
     print(queue._array)

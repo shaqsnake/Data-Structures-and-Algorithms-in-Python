@@ -1,4 +1,4 @@
-class CircleQueue:
+class CircularQueue:
     def __init__(self, cap=10):
         self._array = [None] * cap
         self._front = 0
@@ -25,7 +25,7 @@ class CircleQueue:
 
 
 if __name__ == "__main__":
-    queue = CircleQueue()
+    queue = CircularQueue()
     for i in range(9):
         queue.enqueue(i)
 
