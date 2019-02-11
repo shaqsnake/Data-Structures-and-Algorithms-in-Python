@@ -2,10 +2,13 @@ from abstract_deque import AbstractDeque
 
 
 class ArrayDeque(AbstractDeque):
-    def __init__(self, data=[]):
+    def __init__(self, data=None):
         super().__init__()
-        self._array = data
-        self._size = len(data)
+        if data is None:
+            self._array = []
+        else:
+            self._array = list(data)
+        self._size = len(self._array)
 
     def add_first(self, e):
         self._array.insert(0, e)
@@ -36,3 +39,27 @@ class ArrayDeque(AbstractDeque):
         if self.is_empty():
             raise IndexError("Deque is empty")
         return self._array[-1]
+
+
+if __name__ == "__main__":
+    deque1 = ArrayDeque([1, 2, 3])
+    deque1.add_first(0)
+    deque1.add_last(4)
+    print(deque1._array)
+
+    deque2 = ArrayDeque()
+    deque2.add_first('a')
+    deque2.add_last('b')
+    print(deque2._array)
+
+    deque3 = ArrayDeque()
+    print(deque3._array)
+
+    deque3.add_first('what')
+    deque3.add_last('TF')
+    print(deque1._array)
+    print(deque2._array)
+    print(deque3._array)
+
+    print(deque1._array is deque2._array)
+    print(deque3._array is deque2._array)
