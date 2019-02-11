@@ -25,3 +25,12 @@ def test_array_stack_features(stack):
 
     with pytest.raises(IndexError):
         stack.pop()
+
+
+def test_array_stack_iter(stack):
+    for i in range(1, 10):
+        stack.push(i)
+
+    it = iter(stack)
+    for i in range(9, 0, -1):
+        assert next(it) == i
