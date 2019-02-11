@@ -10,6 +10,9 @@ class ArrayDeque(AbstractDeque):
             self._array = list(data)
         self._size = len(self._array)
 
+    def __iter__(self):
+        return (x for x in self._array)
+
     def add_first(self, e):
         self._array.insert(0, e)
         self._size += 1

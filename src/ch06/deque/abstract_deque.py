@@ -13,6 +13,10 @@ class AbstractDeque(ABC):
         return self._size == 0
 
     @abstractmethod
+    def __iter__(self):
+        raise NotImplementedError
+
+    @abstractmethod
     def add_first(self, e):
         raise NotImplementedError
 
