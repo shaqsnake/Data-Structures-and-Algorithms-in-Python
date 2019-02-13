@@ -3,7 +3,6 @@ from node import SinglyLinkedListNode
 
 
 class LinkedListStack(AbstractStack):
-
     def __init__(self):
         super().__init__()
         self._head = None
@@ -43,4 +42,5 @@ if __name__ == "__main__":
     print(stack.pop())
     print(stack.pop())
     print(stack.pop())
-    print(stack)
+    for i in stack:
+        print(i)
