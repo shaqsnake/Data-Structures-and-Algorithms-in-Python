@@ -55,8 +55,45 @@ class BinarySearchTree:
         else:
             return self._recur_search(node._right, data)
 
+    def delete(self, data):
+        node = self.get_root()
+        parent = None
+        # 遍历定位到待删除节点和其父节点
+        while node and node._data != data:
+            parent = node
+            if data < node._data:
+                node = node._left
+            else:
+                node = node._right
+        if node is None:
+            return
+
+        # 如果待删除节点有左右子树
+        if node._left and node._right:
+            rightMinNode = node._right
+            rightMinNodeParent = node
+            while rightMinNode._left:
+                rightMinNodeParent = rightMinNode
+                rightMinNode = rightMinNode._left
+            node._data = rightMinNode._data
+            node = rightMinNode
+            parent = rightMinNodeParent
+
+        # 待删除节点只有一个子节点或者没有子节点
+        child = None
+        if node._left is not None:
+            child = node._left
+        elif node._right is not None:
+            child = node._right
+
+        if parent is None:  # 如果删除跟节点
+            self._root = child
+        elif parent._left == node:
+            parent._left = child
+        else:
+            parent._right = child
+
 
 if __name__ == "__main__":
-    import random
     bst = BinarySearchTree([5, 1, 6, 3, 8])
     bst.get_root().display()

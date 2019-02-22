@@ -43,3 +43,33 @@ def test_bst_search():
 
     bst.insert(100)
     assert bst.search(100) == True
+
+
+def test_bst_delete():
+    bst = BinarySearchTree()
+    bst.insert(1)
+    assert bst.search(1) == True
+    bst.delete(1)
+    assert bst.search(1) == False
+    bst.insert(21)
+    bst.insert(28)
+    bst.insert(14)
+    bst.insert(32)
+    bst.insert(25)
+    bst.insert(18)
+    bst.insert(11)
+    bst.insert(30)
+    bst.insert(19)
+    bst.insert(27)
+
+    assert bst.search(11) == True
+    bst.delete(11)
+    assert bst.search(11) == False
+
+    assert bst.search(18) == True
+    bst.delete(18)
+    assert bst.search(18) == False
+
+    bst.delete(28)
+    assert bst.search(28) == False
+    assert repr(bst) == "14 19 21 25 27 30 32"
