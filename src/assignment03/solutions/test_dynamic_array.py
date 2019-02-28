@@ -72,31 +72,38 @@ def test_dynamic_array_should_shrink_automatically(dynamic_array):
         dynamic_array.append(i)
     assert len(dynamic_array) == 64
     assert dynamic_array._cap == 64
+    assert len(dynamic_array._A) == 64
 
     for i in range(48):
         dynamic_array.pop()
     assert len(dynamic_array) == 16
     assert dynamic_array._cap == 32
+    assert len(dynamic_array._A) == 32
 
     for i in range(8):
         dynamic_array.pop()
     assert len(dynamic_array) == 8
     assert dynamic_array._cap == 16
+    assert len(dynamic_array._A) == 16
 
     for i in range(4):
         dynamic_array.pop()
     assert len(dynamic_array) == 4
     assert dynamic_array._cap == 8
+    assert len(dynamic_array._A) == 8
 
     for i in range(2):
         dynamic_array.pop()
     assert len(dynamic_array) == 2
     assert dynamic_array._cap == 4
+    assert len(dynamic_array._A) == 4
 
     dynamic_array.remove(0)
     assert len(dynamic_array) == 1
     assert dynamic_array._cap == 2
+    assert len(dynamic_array._A) == 2
 
     dynamic_array.remove(1)
     assert len(dynamic_array) == 0
     assert dynamic_array._cap == 1
+    assert len(dynamic_array._A) == 1

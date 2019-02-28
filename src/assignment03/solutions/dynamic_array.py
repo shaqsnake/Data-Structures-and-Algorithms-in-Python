@@ -74,7 +74,7 @@ class DynamicArray:
                 self._A[self._len - 1] = None
                 self._len -= 1
                 if 0 <= self._len <= self._cap // 4:
-                    self._cap //= 2
+                    self._resize(self._cap//2)
                 return
         raise ValueError('value not found')
 
@@ -87,5 +87,5 @@ class DynamicArray:
         self._A[self._len - 1] = None
         self._len -= 1
         if 0 <= self._len <= self._cap // 4:
-            self._cap //= 2
+            self._resize(self._cap//2)
         return res
