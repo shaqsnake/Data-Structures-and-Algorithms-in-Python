@@ -18,6 +18,7 @@
 3. [Assignment-03](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-03.ipynb)
 4. [Assignment-04](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-04.ipynb)
 5. [Assignment-05](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-05.ipynb)
+6. [Assignment-06](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-06.ipynb)
 
 ## 课程教材
 [Data Structures & Algorithms in Python](https://doc.lagout.org/programmation/python/Data%20Structures%20and%20Algorithms%20in%20Python%20[Goodrich,%20Tamassia%20&%20Goldwasser%202013-03-18].pdf)
