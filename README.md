@@ -13,6 +13,7 @@
 8. [散列表和集合](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/08-Hash-Tables-and-Sets.ipynb)
 9. [排序算法](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/09-Sorting-Algorithms.ipynb)
 10. [树](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/10-Trees.ipynb)
+11. [堆、B+树和跳表](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/11-Heaps-B%2BTrees-and-Skiplists.ipynb)
 
 ## 课后作业
 1. [Assignment-01](https://github.com/shaqsnake/Data-Structures-and-Algorithms-in-Python/blob/master/Assignment-01.ipynb)
